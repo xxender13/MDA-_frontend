@@ -40,6 +40,8 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"cd backend && nodemon server\"",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test && ./node_modules/.bin/react-scripts test",
     "eject": "react-scripts eject"
@@ -65,6 +67,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
+    "gh-pages": "^6.1.1",
     "jest": "^27.5.1",
     "nodemon": "^3.0.3",
     "react-scripts": "^5.0.1",
